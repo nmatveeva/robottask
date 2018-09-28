@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.2 on win32)" generated="20180928 15:40:23.864">
+<suite id="s1" name="Tests" source="C:\Users\mana\PycharmProjects\robottask\Tests">
+<suite id="s1-s1" name="Empty Login Error" source="C:\Users\mana\PycharmProjects\robottask\Tests\empty_login_error.robot">
+<kw name="Open Browser On Login Page" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:24.143" level="INFO">Opening browser 'Chrome' to base url 'https://finder.iconectiv.com/finder/sec/login'.</msg>
+<status status="PASS" starttime="20180928 15:40:24.143" endtime="20180928 15:40:29.806"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180928 15:40:29.806" endtime="20180928 15:40:30.943"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:30.944" endtime="20180928 15:40:30.944"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:30.954" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:30.945" endtime="20180928 15:40:30.954"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:30.944" endtime="20180928 15:40:30.954"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:24.143" endtime="20180928 15:40:30.954"></status>
+</kw>
+<test id="s1-s1-t1" name="Empty UserID">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:30.955" level="INFO">Opening url 'https://finder.iconectiv.com/finder/sec/login'</msg>
+<status status="PASS" starttime="20180928 15:40:30.955" endtime="20180928 15:40:31.612"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:31.627" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:31.615" endtime="20180928 15:40:31.627"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:31.613" endtime="20180928 15:40:31.628"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:30.955" endtime="20180928 15:40:31.628"></status>
+</kw>
+<kw name="Login With Empty Credentials Should Return An Error">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${userId}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:31.631" endtime="20180928 15:40:31.688"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:31.689" level="INFO">Typing text '' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:40:31.688" endtime="20180928 15:40:31.777"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:31.630" endtime="20180928 15:40:31.777"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:31.778" endtime="20180928 15:40:31.837"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:31.837" level="INFO">Typing text 'userPass' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:40:31.837" endtime="20180928 15:40:31.971"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:31.777" endtime="20180928 15:40:31.971"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:40:31.972" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:40:31.972" endtime="20180928 15:40:32.125"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:31.971" endtime="20180928 15:40:32.125"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>UserID and Password are required.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:32.126" endtime="20180928 15:40:32.170"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.170" level="INFO">Verifying element 'class:mr-3' contains exact text 'UserID and Password are required.'.</msg>
+<status status="PASS" starttime="20180928 15:40:32.170" endtime="20180928 15:40:32.209"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.126" endtime="20180928 15:40:32.209"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.126" endtime="20180928 15:40:32.209"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:31.629" endtime="20180928 15:40:32.209"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:30.954" endtime="20180928 15:40:32.210" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Empty Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.213" level="INFO">Opening url 'https://finder.iconectiv.com/finder/sec/login'</msg>
+<status status="PASS" starttime="20180928 15:40:32.213" endtime="20180928 15:40:32.655"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.672" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:32.656" endtime="20180928 15:40:32.672"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.655" endtime="20180928 15:40:32.672"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.212" endtime="20180928 15:40:32.672"></status>
+</kw>
+<kw name="Login With Empty Credentials Should Return An Error">
+<arguments>
+<arg>${VALID_USERID}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${userId}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:32.674" endtime="20180928 15:40:32.716"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.717" level="INFO">Typing text 'userId' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:40:32.716" endtime="20180928 15:40:32.839"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.673" endtime="20180928 15:40:32.839"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:32.840" endtime="20180928 15:40:32.881"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.882" level="INFO">Typing text '' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:40:32.881" endtime="20180928 15:40:32.958"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.840" endtime="20180928 15:40:32.958"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:40:32.959" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:40:32.959" endtime="20180928 15:40:33.094"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.958" endtime="20180928 15:40:33.094"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>UserID and Password are required.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:33.095" endtime="20180928 15:40:33.141"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.141" level="INFO">Verifying element 'class:mr-3' contains exact text 'UserID and Password are required.'.</msg>
+<status status="PASS" starttime="20180928 15:40:33.141" endtime="20180928 15:40:33.182"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.095" endtime="20180928 15:40:33.182"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.094" endtime="20180928 15:40:33.182"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.673" endtime="20180928 15:40:33.182"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:32.211" endtime="20180928 15:40:33.183" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Empty UserID And Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.185" level="INFO">Opening url 'https://finder.iconectiv.com/finder/sec/login'</msg>
+<status status="PASS" starttime="20180928 15:40:33.185" endtime="20180928 15:40:33.641"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.651" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:33.642" endtime="20180928 15:40:33.652"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.641" endtime="20180928 15:40:33.652"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.185" endtime="20180928 15:40:33.652"></status>
+</kw>
+<kw name="Login With Empty Credentials Should Return An Error">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${userId}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:33.653" endtime="20180928 15:40:33.697"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.698" level="INFO">Typing text '' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:40:33.698" endtime="20180928 15:40:33.771"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.653" endtime="20180928 15:40:33.771"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:33.771" endtime="20180928 15:40:33.841"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.841" level="INFO">Typing text '' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:40:33.841" endtime="20180928 15:40:33.921"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.771" endtime="20180928 15:40:33.921"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:40:33.922" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:40:33.922" endtime="20180928 15:40:34.049"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.922" endtime="20180928 15:40:34.050"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>UserID and Password are required.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:34.051" endtime="20180928 15:40:34.088"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:34.089" level="INFO">Verifying element 'class:mr-3' contains exact text 'UserID and Password are required.'.</msg>
+<status status="PASS" starttime="20180928 15:40:34.089" endtime="20180928 15:40:34.131"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:34.050" endtime="20180928 15:40:34.131"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:34.050" endtime="20180928 15:40:34.131"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.652" endtime="20180928 15:40:34.132"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:33.184" endtime="20180928 15:40:34.132" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180928 15:40:34.135" endtime="20180928 15:40:36.331"></status>
+</kw>
+<doc>A test suite containing tests related to login with empty credentials.</doc>
+<status status="PASS" starttime="20180928 15:40:23.900" endtime="20180928 15:40:36.331"></status>
+</suite>
+<suite id="s1-s2" name="Forgot Password" source="C:\Users\mana\PycharmProjects\robottask\Tests\forgot_password.robot">
+<test id="s1-s2-t1" name="Send UserID To Recover Password">
+<kw name="Open Browser On Forgot Password Page" library="resource">
+<kw name="Open Browser On Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:36.358" level="INFO">Opening browser 'Chrome' to base url 'https://finder.iconectiv.com/finder/sec/login'.</msg>
+<status status="PASS" starttime="20180928 15:40:36.357" endtime="20180928 15:40:41.372"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180928 15:40:41.372" endtime="20180928 15:40:42.508"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:42.508" endtime="20180928 15:40:42.508"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:42.518" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:42.509" endtime="20180928 15:40:42.518"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:42.508" endtime="20180928 15:40:42.518"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:36.357" endtime="20180928 15:40:42.518"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id:forgotpasswordlink</arg>
+</arguments>
+<msg timestamp="20180928 15:40:42.519" level="INFO">Clicking link 'id:forgotpasswordlink'.</msg>
+<status status="PASS" starttime="20180928 15:40:42.518" endtime="20180928 15:40:42.642"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id:userID</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:42.643" endtime="20180928 15:40:42.693"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:42.693" endtime="20180928 15:40:42.730"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:36.356" endtime="20180928 15:40:42.730"></status>
+</kw>
+<kw name="Send UserID" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:userID</arg>
+<arg>${VALID_USERID}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:42.732" level="INFO">Typing text 'userId' into text field 'id:userID'.</msg>
+<status status="PASS" starttime="20180928 15:40:42.731" endtime="20180928 15:40:42.875"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:42.875" endtime="20180928 15:40:42.906"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:40:42.906" level="INFO">Clicking button 'id:sendbutton'.</msg>
+<status status="PASS" starttime="20180928 15:40:42.906" endtime="20180928 15:40:43.042"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:42.731" endtime="20180928 15:40:43.042"></status>
+</kw>
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>If your userID is valid and active, a password reset link will be sent to your email address. If you do not receive one, please contact your TruNumber Finder Administrator.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:43.043" endtime="20180928 15:40:43.301"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:43.301" level="INFO">Verifying element 'class:mr-3' contains exact text 'If your userID is valid and active, a password reset link will be sent to your email address. If you do not receive one, please contact your TruNumber Finder Administrator.'.</msg>
+<status status="PASS" starttime="20180928 15:40:43.301" endtime="20180928 15:40:43.340"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:43.042" endtime="20180928 15:40:43.340"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180928 15:40:43.341" endtime="20180928 15:40:45.501"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:36.355" endtime="20180928 15:40:45.503" critical="yes"></status>
+</test>
+<doc>A test suite with a single test to verify ability to recover user password.</doc>
+<status status="PASS" starttime="20180928 15:40:36.342" endtime="20180928 15:40:45.509"></status>
+</suite>
+<suite id="s1-s3" name="forgot userId" source="C:\Users\mana\PycharmProjects\robottask\Tests\forgot_userId.robot">
+<test id="s1-s3-t1" name="Send Email To Recover UserID">
+<kw name="Open Browser On Forgot UserID Page" library="resource">
+<kw name="Open Browser On Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:45.536" level="INFO">Opening browser 'Chrome' to base url 'https://finder.iconectiv.com/finder/sec/login'.</msg>
+<status status="PASS" starttime="20180928 15:40:45.535" endtime="20180928 15:40:51.003"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180928 15:40:51.003" endtime="20180928 15:40:52.148"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:52.150" endtime="20180928 15:40:52.152"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:40:52.180" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:40:52.154" endtime="20180928 15:40:52.180"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:52.152" endtime="20180928 15:40:52.181"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:45.534" endtime="20180928 15:40:52.182"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id:forgotuseridlink</arg>
+</arguments>
+<msg timestamp="20180928 15:40:52.183" level="INFO">Clicking link 'id:forgotuseridlink'.</msg>
+<status status="PASS" starttime="20180928 15:40:52.182" endtime="20180928 15:40:52.322"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id:email</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:52.322" endtime="20180928 15:40:52.373"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is disabled.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:52.373" endtime="20180928 15:40:52.407"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:45.534" endtime="20180928 15:40:52.408"></status>
+</kw>
+<kw name="Send Email" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${VALID_EMAIL}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:52.409" level="INFO">Typing text 'email@test.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20180928 15:40:52.409" endtime="20180928 15:40:52.588"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:52.588" endtime="20180928 15:40:52.617"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:sendbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:40:52.617" level="INFO">Clicking button 'id:sendbutton'.</msg>
+<status status="PASS" starttime="20180928 15:40:52.617" endtime="20180928 15:40:52.741"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:52.408" endtime="20180928 15:40:52.741"></status>
+</kw>
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>If your email is found in the system, your userID information will be sent to your email address. If you do not receive it, please contact your TruNumber Finder Administrator.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:40:52.742" endtime="20180928 15:40:52.994"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:52.995" level="INFO">Verifying element 'class:mr-3' contains exact text 'If your email is found in the system, your userID information will be sent to your email address. If you do not receive it, please contact your TruNumber Finder Administrator.'.</msg>
+<status status="PASS" starttime="20180928 15:40:52.995" endtime="20180928 15:40:53.036"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:52.742" endtime="20180928 15:40:53.036"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180928 15:40:53.036" endtime="20180928 15:40:55.200"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:45.533" endtime="20180928 15:40:55.202" critical="yes"></status>
+</test>
+<doc>A test suite with a single test to verify ability to recover UserID.</doc>
+<status status="PASS" starttime="20180928 15:40:45.518" endtime="20180928 15:40:55.208"></status>
+</suite>
+<suite id="s1-s4" name="Invalid Login Error" source="C:\Users\mana\PycharmProjects\robottask\Tests\invalid_login_error.robot">
+<kw name="Open Browser On Login Page" library="resource" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180928 15:40:55.227" level="INFO">Opening browser 'Chrome' to base url 'https://finder.iconectiv.com/finder/sec/login'.</msg>
+<status status="PASS" starttime="20180928 15:40:55.226" endtime="20180928 15:41:01.115"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180928 15:41:01.115" endtime="20180928 15:41:02.239"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:02.239" endtime="20180928 15:41:02.240"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:41:02.249" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:41:02.240" endtime="20180928 15:41:02.250"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:02.240" endtime="20180928 15:41:02.250"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:55.226" endtime="20180928 15:41:02.250"></status>
+</kw>
+<test id="s1-s4-t1" name="Invalid UserID">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:02.252" level="INFO">Opening url 'https://finder.iconectiv.com/finder/sec/login'</msg>
+<status status="PASS" starttime="20180928 15:41:02.251" endtime="20180928 15:41:03.017"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.024" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:41:03.017" endtime="20180928 15:41:03.025"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.017" endtime="20180928 15:41:03.025"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:02.251" endtime="20180928 15:41:03.025"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Return An Error">
+<arguments>
+<arg>invalid</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${userId}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:03.027" endtime="20180928 15:41:03.084"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.085" level="INFO">Typing text 'invalid' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:41:03.084" endtime="20180928 15:41:03.206"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.026" endtime="20180928 15:41:03.206"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:03.206" endtime="20180928 15:41:03.256"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.257" level="INFO">Typing text 'userPass' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:41:03.256" endtime="20180928 15:41:03.383"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.206" endtime="20180928 15:41:03.383"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.384" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:41:03.384" endtime="20180928 15:41:03.535"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.383" endtime="20180928 15:41:03.535"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:03.536" endtime="20180928 15:41:03.791"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.792" level="INFO">Verifying element 'class:mr-3' contains exact text 'The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.'.</msg>
+<status status="PASS" starttime="20180928 15:41:03.791" endtime="20180928 15:41:03.832"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.536" endtime="20180928 15:41:03.832"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.535" endtime="20180928 15:41:03.832"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.026" endtime="20180928 15:41:03.832"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:02.250" endtime="20180928 15:41:03.833" critical="yes"></status>
+</test>
+<test id="s1-s4-t2" name="Invalid Password">
+<kw name="Go To Login Page" library="resource" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:03.836" level="INFO">Opening url 'https://finder.iconectiv.com/finder/sec/login'</msg>
+<status status="PASS" starttime="20180928 15:41:03.836" endtime="20180928 15:41:04.337"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:41:04.346" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:41:04.338" endtime="20180928 15:41:04.346"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.337" endtime="20180928 15:41:04.346"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.835" endtime="20180928 15:41:04.346"></status>
+</kw>
+<kw name="Login With Invalid Credentials Should Return An Error">
+<arguments>
+<arg>${VALID_USERID}</arg>
+<arg>invalid</arg>
+</arguments>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${userId}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:04.347" endtime="20180928 15:41:04.390"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:04.390" level="INFO">Typing text 'userId' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:41:04.390" endtime="20180928 15:41:04.494"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.347" endtime="20180928 15:41:04.494"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:04.495" endtime="20180928 15:41:04.535"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:04.535" level="INFO">Typing text 'invalid' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:41:04.535" endtime="20180928 15:41:04.651"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.494" endtime="20180928 15:41:04.651"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:41:04.652" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:41:04.652" endtime="20180928 15:41:04.816"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.651" endtime="20180928 15:41:04.817"></status>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Verify Text Message" library="resource">
+<arguments>
+<arg>The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:04.817" endtime="20180928 15:41:05.078"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${MESSAGE}</arg>
+<arg>${textmessage}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:05.078" level="INFO">Verifying element 'class:mr-3' contains exact text 'The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.'.</msg>
+<status status="PASS" starttime="20180928 15:41:05.078" endtime="20180928 15:41:05.123"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.817" endtime="20180928 15:41:05.124"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.817" endtime="20180928 15:41:05.124"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:04.346" endtime="20180928 15:41:05.124"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:03.835" endtime="20180928 15:41:05.125" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180928 15:41:05.127" endtime="20180928 15:41:07.281"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:40:55.216" endtime="20180928 15:41:07.281"></status>
+</suite>
+<suite id="s1-s5" name="Valid Login" source="C:\Users\mana\PycharmProjects\robottask\Tests\valid_login.robot">
+<test id="s1-s5-t1" name="Valid Login">
+<kw name="Open Browser On Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:07.306" level="INFO">Opening browser 'Chrome' to base url 'https://finder.iconectiv.com/finder/sec/login'.</msg>
+<status status="PASS" starttime="20180928 15:41:07.305" endtime="20180928 15:41:12.868"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180928 15:41:12.868" endtime="20180928 15:41:13.994"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:13.994" endtime="20180928 15:41:13.995"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>TruNumber Finder</arg>
+</arguments>
+<msg timestamp="20180928 15:41:14.003" level="INFO">Page title is 'TruNumber Finder'.</msg>
+<status status="PASS" starttime="20180928 15:41:13.995" endtime="20180928 15:41:14.003"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:13.995" endtime="20180928 15:41:14.003"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:07.305" endtime="20180928 15:41:14.003"></status>
+</kw>
+<kw name="Input UserID" library="resource">
+<arguments>
+<arg>${VALID_USERID}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:14.004" endtime="20180928 15:41:14.052"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginuser</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:14.052" level="INFO">Typing text 'userId' into text field 'id:loginuser'.</msg>
+<status status="PASS" starttime="20180928 15:41:14.052" endtime="20180928 15:41:14.175"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:14.004" endtime="20180928 15:41:14.175"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+</arguments>
+<status status="PASS" starttime="20180928 15:41:14.177" endtime="20180928 15:41:14.237"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginpassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180928 15:41:14.238" level="INFO">Typing text 'userPass' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20180928 15:41:14.237" endtime="20180928 15:41:14.367"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:14.176" endtime="20180928 15:41:14.368"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id:loginbutton</arg>
+</arguments>
+<msg timestamp="20180928 15:41:14.369" level="INFO">Clicking button 'id:loginbutton'.</msg>
+<status status="PASS" starttime="20180928 15:41:14.368" endtime="20180928 15:41:14.506"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:14.368" endtime="20180928 15:41:14.507"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180928 15:41:14.507" endtime="20180928 15:41:16.695"></status>
+</kw>
+<status status="PASS" starttime="20180928 15:41:07.304" endtime="20180928 15:41:16.696" critical="yes"></status>
+</test>
+<doc>A test suite with a single test for valid login.</doc>
+<status status="PASS" starttime="20180928 15:41:07.293" endtime="20180928 15:41:16.702"></status>
+</suite>
+<status status="PASS" starttime="20180928 15:40:23.869" endtime="20180928 15:41:16.710"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Empty Login Error">Tests.Empty Login Error</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Forgot Password">Tests.Forgot Password</stat>
+<stat pass="1" fail="0" id="s1-s3" name="forgot userId">Tests.forgot userId</stat>
+<stat pass="2" fail="0" id="s1-s4" name="Invalid Login Error">Tests.Invalid Login Error</stat>
+<stat pass="1" fail="0" id="s1-s5" name="Valid Login">Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180928 15:40:23.848" level="ERROR">Error in file 'C:\Users\mana\PycharmProjects\robottask\Tests\invalid_login_error.robot': Setting 'Documentation' used multiple times.</msg>
+</errors>
+</robot>

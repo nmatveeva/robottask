@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation    Suite description
 Documentation     A test suite containing tests related to invalid login.
 Suite Setup       Open Browser On Login Page
 Suite Teardown    Close Browser

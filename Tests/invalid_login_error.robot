@@ -6,17 +6,17 @@ Test Setup        Go To Login Page
 Test Template     Login With Invalid Credentials Should Return An Error
 Resource          resource.robot
 
-*** Test Cases ***           USER ID           PASSWORD
-Invalid UserID               invalid           ${VALID_PASSWORD}
-Invalid Password             ${VALID_USERID}   invalid
+*** Test Cases ***           USER ID           PASSWORD             Message
+Invalid UserID               invalid           ${VALID_PASSWORD}    ${ERROR_TEXT1}
+Invalid Password             ${VALID_USERID}   invalid              ${ERROR_TEXT1}
+Empty UserID                 ${EMPTY}          ${VALID_PASSWORD}    ${ERROR_TEXT2}
+Empty Password               ${VALID_USERID}   ${EMPTY}             ${ERROR_TEXT2}
+Empty UserID And Password    ${EMPTY}          ${EMPTY}             ${ERROR_TEXT2}
 
 *** Keywords ***
 Login With Invalid Credentials Should Return An Error
-    [Arguments]  ${userId}  ${password}
+    [Arguments]  ${userId}  ${password}  ${message}
     Input UserID  ${userId}
     Input Password  ${password}
     Submit Credentials
-    Login Should Have Failed
-
-Login Should Have Failed
-    Verify Text Message  The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.
+    Verify Text Message  ${message}

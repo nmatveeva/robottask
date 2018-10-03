@@ -10,6 +10,8 @@ ${VALID_USERID}    userId       #Specify valid UserID value
 ${VALID_PASSWORD}  userPass     #Specify valid Password value
 ${MESSAGE}         class:mr-3
 ${VALID_EMAIL}     email@test.com
+${ERROR_TEXT1}     The userID or password are incorrect. If you think you have gotten this message in error, please contact your TruNumber Finder Administrator.
+${ERROR_TEXT2}     UserID and Password are required.
 *** Keywords ***
 Open Browser On Login Page
     Open Browser  ${LOGIN URL}  ${BROWSER}
